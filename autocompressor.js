@@ -37,10 +37,10 @@ async function compressFile(filePath) {
     const gzipStream = zlib.createGzip();
     input.pipe(gzipStream).pipe(output);
   
-    await new Promise((resolve, reject) => {
-      output.on('finish', resolve);
-      output.on('error', reject);
-    });
+    // await new Promise((resolve, reject) => {
+    //   output.on('finish', resolve);
+    //   output.on('error', reject);
+    // });
   
         console.log(`${filePath} - сжатие завершено`); 
 }
